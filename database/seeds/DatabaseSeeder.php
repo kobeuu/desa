@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder {
 		Model::unguard();
 
 		User::create([
-			'name' => 'admin',
+			'name' => 'Administrator',
 			'email' => 'admin@wanawali.desa.id',
 			'password' => bcrypt('123456'),
-			'jabatan' => 'operator',
+			'jabatan' => 'Operator Desa',
 		]);
 
 		Model::reguard();

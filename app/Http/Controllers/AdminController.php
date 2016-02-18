@@ -1,6 +1,5 @@
 <?php namespace App\Http\Controllers;
 
-use App\Article;
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -20,20 +19,9 @@ class AdminController extends Controller {
 
 	public function index(){
 		$count = [
-			'articles' => Article::count(),
+			'users' => User::count(),
 		];
 		return view('admin.dashboard', compact('count'));
-	}
-
-	public function articles()
-	{
-		if(Auth::user()->admin){
-			$articles = Article::latest('published_at')->paginate(5);
-		} else {
-			$articles = Auth::user()->articles()->latest('published_at')->paginate(5);
-		}
-
-		return view('admin.articles', compact('articles'));
 	}
 
 }

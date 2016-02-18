@@ -15,9 +15,13 @@
     <link rel="stylesheet" href="{{ asset ("plugins/select2/select2.min.css") }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset ("plugins/ionicons/css/ionicons.min.css") }}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset ("plugins/datatables/dataTables.bootstrap.css") }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset ("dist/css/AdminLTE.min.css") }}">
+
     <link rel="stylesheet" href="{{ asset ("dist/css/skins/skin-blue.min.css") }}">
+
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ asset ("plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css") }}">
 
@@ -70,17 +74,27 @@
     <!-- Bootstrap 3.3.5 -->
     <script src="{{ asset ("bootstrap/js/bootstrap.min.js") }}"></script>
 
-    <!-- AdminLTE App -->
-    <script src="{{ asset ("dist/js/app.min.js") }}"></script>
-
     <!-- Bootstrap WYSIHTML5 -->
     <script src="{{ asset ("plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js") }}"></script>
 
     <!-- select 2 -->
     <script src="{{ asset ("plugins/select2/select2.full.min.js") }}"></script>
 
-    <script type="text/javascript">
-      @yield('script')
+    <script src="{{ asset ("plugins/datatables/jquery.dataTables.min.js") }}"></script>
+    <script src="{{ asset ("plugins/datatables/dataTables.bootstrap.min.js") }}"></script>
+    <script src="{{ asset ("plugins/slimScroll/jquery.slimscroll.min.js") }}"></script>
+    <script src="{{ asset ("plugins/fastclick/fastclick.min.js") }}"></script>
+
+        <!-- AdminLTE App -->
+    <script src="{{ asset ("dist/js/app.min.js") }}"></script>
+    
+    <!-- AdminLTE App -->
+    <script src="{{ asset ("dist/js/demo.js") }}"></script>
+
+    <script>
+      $(function () {
+        $("#datatable").DataTable();
+      });
     </script>
 
   </body>

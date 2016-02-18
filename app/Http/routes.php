@@ -27,6 +27,8 @@ Route::get('dashboard/news', 'AdminController@news');
 /* Users*/
 Route::resource('users', 'UsersController');
 
+Route::resource('warga', 'WargaController');
+
 /* Auth */
 Route::controllers([
 	'auth' => 'Auth\AuthController',
